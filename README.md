@@ -2,7 +2,7 @@
 
 This was the project I worked on during the summer of 2025. I wanted to design something with my 3D printer on my own and using an ESP32. I decided to create something to shoot ping pong balls or similar, and I expanded this idea into an automatic foam ball launcher.
 
-![Image of the foam ball launcher CAD assembly](/Images/Foam-Ball-Launcher.png)
+![Image of the foam ball launcher CAD assembly](/Images/Foam-Ball-Launcher-CAD.png)
 
 ## Mechanical Design
 Before designing anything, I wanted to decide on two main parts of the mechanism: how the balls would be fed into the flywheels, and whether to use one or two motors for the flywheels. I decided to use flywheels (instead of something pneumatic) because it is much simpler, especially when making parts with a 3D printer. Ultimately, I decided to use one motor for both flywheels. This is because I already had one high-power motor, and even if using two identical motors, there would be a slight difference in speed, which is difficult to tune due to being much higher power than the ESP32. Having only one motor also makes the assembly much lighter. For the feeding mechanism, I decided to use a gravity-based system, do to its simplicity. The balls would be dropped into the flywheels in a controlled manner (using a servo), rather than a more complicated option like a solenoid or belt to move them into the flywheels.<br/><br/>
@@ -14,7 +14,7 @@ After deciding on how the core part of the shooter would work, I started designi
 In the design of the shooter, I wanted to try to minimize any use of hardware (screws, bolts/nuts, etc.) and make the fastening between parts integrated within the design. I used poles protruding from the main body, which inserted into the motor mount assembly to keep it in place. I also added a spot for a zip tie to go around the motor for a more permanent and secure attachment. In most other places, I used friction fits to secure things like bearings and the flywheels.
 
 ### Belt Drive Design
-![Close-up of the belt drive CAD](/Images/Belt-Drive.png)
+![Close-up of the belt drive CAD](/Images/Belt_Drive_CAD.png)
 
 (Note that the upside-down belt gear is actually an idler)<br/>
 
@@ -23,7 +23,7 @@ The most complex part of the shooter to design was the belt drive. The main init
 However, after testing this belt design with a real flywheel, the motor started skipping on the belt. I realized that I either needed to remake the entire belt assembly or fit a tensioner next to the motor, such that the motor would have more belt surface to contact. I settled on modifying the tensioner to be on the outside of the belt, next to the motor shaft. This kept tension and increased the surface area enough to prevent motor skipping.
 
 ### Flywheel Design
-![Close-up of one of the flywheels in CAD](/Images/Flywheel.png)
+![Close-up of one of the flywheels in CAD](/Images/Flywheel_CAD.png)
 
 The design of the flywheels was the most tedious, requiring lots of trial and error. I initially used a solid plastic wheel with elastics on the outside to add friction. I thought this would work with the foam balls, since they would deform to create the required force to shoot the ball. However, when testing, I found that this compression had very little stored energy, so the ball would not have much speed exiting the barrel. I tried bigger flywheels to compress the ball more, but the ball did not pass through the flywheels. So, I decided to look into more deformable options. This also had the advantage of being able to shoot harder balls, like ping pong balls or even golf balls if soft enough. I looked into plastic and rubber wheels for suitcases or moving tables, but ultimately settled on buying a roll of TPU filament. This is because TPU is very flexible, and I would be able to print any shape I wanted for the flywheel. I used the TPU as an outside, and the standard plastic (PETG) to secure it to the shaft. I used a few different sizes of flywheel and different amounts of infill to change the stiffness and elasticity of the flywheel. I eventually settled on what I have now, and although it could be better, I feel it is good enough, since it shoots the foam balls with an appreciable speed.<br/><br/>
 
