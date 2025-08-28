@@ -29,7 +29,7 @@ The design of the flywheels was the most tedious, requiring lots of trial and er
 
 ## Electrical Design
 
-As mentioned earlier, I decided on a single motor for driving the flywheel and a mini servo for controlling when the balls are fired. I decided on these motors because I already had them, so I decided to work with them instead of buying new ones. I also wanted to integrate a tilt and swivel functionality, for which I had multiple high-strength, slow-speed motors. These motors had about 180 degrees of motion, and they had an integrated potentiometer, which can be used to find the position of the motor shaft. <br/><br/>
+As mentioned earlier, I decided on a single motor for driving the flywheel and a mini servo for controlling when the balls are fired. I decided on these motors because I already had them, so I decided to work with them instead of buying new ones. I also wanted to integrate a tilt and swivel functionality, for which I had multiple high-strength, slow-speed motors. These motors had about 180 degrees of motion, and they had an integrated potentiometer, which can be used to find the position of the motor shaft. <br/>
 
 ### Motors
 
