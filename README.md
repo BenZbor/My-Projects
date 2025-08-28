@@ -31,13 +31,13 @@ The design of the flywheels was the most tedious, requiring lots of trial and er
 
 As mentioned earlier, I decided on a single motor for driving the flywheel and a mini servo for controlling when the balls are fired. I decided on these motors because I already had them, so I decided to work with them instead of buying new ones. I also wanted to integrate a tilt and swivel functionality, for which I had multiple high-strength, slow-speed motors. These motors had about 180 degrees of motion, and they had an integrated potentiometer, which can be used to find the position of the motor shaft. <br/><br/>
 
-# Motors
+### Motors
 
 The flywheel motor is a 7.2V motor that was taken from an old cordless drill and draws well over 10A. Because of this, this motor provides more than enough power even at a 1:1 gear ratio, which is fast enough for the flywheels. Because of the high current draw of the motor, standard jumper wires heat up after a short amount of use, and using them even produces an audible speed reduction from the extra resistance. Because of this, I had to make 14-gauge wires specifically for these motors. I purchased 7.4V RC car rechargeable batteries to power the motor, and used a relay to be able to switch the motor on and off using an ESP32 board. <br/><br/>
 
 The motors I used for the swivel functionality were originally part of a car's AC system. The motors consisted of a small 12V DC motor with a large gear ratio outputted to a metal shaft. The shaft was also connected to another gear, which attached to a potentiometer in order to determine the relative position of the motor shaft at any time. This motor/gearbox was a great fit for the swivel design, as it was more than strong enough to move the entire ball shooter, and it allowed me to fine-tune the position with the integrated potentiometer. The only issues were that it was a bit slow when powered by the 7.4V battery, and I couldn't find it on the internet. This meant I had to open it up to tell what was inside and that I had to model it from scratch, which took many iterations to get right, given its strange shape.
 
-# Batteries
+### Batteries
 
 
 
