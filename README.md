@@ -15,8 +15,7 @@ In the design of the shooter, I wanted to try to minimize any use of hardware (s
 
 ### Belt Drive Design
 ![Close-up of the belt drive CAD](/Images/Belt_Drive_CAD.png)
-
-(Note that the upside-down belt gear is actually an idler)<br/>
+<br/>(Note that the upside-down belt gear is a placeholder for an idler)<br/>
 
 The most complex part of the shooter to design was the belt drive. The main initial issue with a belt system was that by directly driving both driveshafts, one would spin the wrong way. I solved this by driving a shaft next to one of the driveshafts, and 2 gears to reverse the spinning direction. However, this caused a problem where the smaller shaft (the one with the belt gear and direction reversing gear) would be pulled towards the middle of the belt, creating a lot of friction between the 2 printed gears. I solved this by adding a stabilizing part above it, connecting the shaft to the driveshaft and reducing how much it tilted. When designing the spacing for the belt gears and motors, I tried to design it in such a way that a standard belt loop size would fit; however, I realized I could 'splice' a straight belt, saving the ~$20 it costs for a set of closed-loop belts. This meant I could make it any size I wanted. I initially tried to use this to my advantage by not using a tensioner; however, I quickly realized that the belt was too loose, but too tight with one less tooth in the loop - meaning I needed a tensioner. I designed 2 options, using a screw and a nut to adjust the tightness. I remade the belt and found the ideal tension.<br/><br/>
 
@@ -39,12 +38,13 @@ The motors I used for the swivel functionality were originally part of a car's A
 
 ### Batteries
 
+I initially wanted to only use a single battery for simplicity and space savings. However, I realized that only using one battery would require me to create voltage steppers and design a PCB. So, for the time being, I am using 2 separate batteries. I need 2 separate batteries because the DC motor runs on 7.2V at a very high current, while my control system (ESP32, explained below) runs on only 5V. Since I already had the 5V battery, it made much more sense to just integrate both batteries into the design than to design a custom circuit/PCB to use a single battery. The 5V battery was actually a power bank intended for a phone, with up to 2.1A output - which is more than enough to run the ESP32 and the servo motor. The other battery is a rechargeable 7.4V lithium-ion battery, which is designed for RC cars with high current draw. It also has a separate set of cables for recharging, which allowed me to attach my own connectors to it while using the original charger the batteries came with. 
 
+### Hardware (Microcontroller)
+
+I decided to use an ESP32 to control the launcher over an Arduino Uno, mainly because of future plans I have for this project. I narrowed the options down to these two because they are the ones I currently have. Although the Arduino Uno is more than capable of running the launcher as-is, I want to expand the functionality of the launcher to be mounted to wheels and have it controllable through an app over Wi-Fi. Because of this, I decided to use an ESP32, which has the processing power and hardware capabilities to do this onboard, unlike the Arduino. The main drawback of the ESP32 was that it only ran at 3.3V, meaning it could not drive the servo. This was solved using a custom board I soldered together in one of my design classes, since it can take a 5V input, and drive small DC motors and the mini servo. It also has lots of useful components for testing, like LEDs, potentiometers, buttons, and switches. The downside of the breakout board is its size, but the benefits far outweigh this. In the future, I may design a smaller board custom to this project alongside the voltage switcher mentioned above.
 
 ## Software Design
 
-# Hardware
-
-# Software
 
 ## Future Improvements
