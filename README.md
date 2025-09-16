@@ -16,7 +16,7 @@ In the design of the shooter, I wanted to try to minimize any use of hardware (s
 
 ### Belt Drive Design
 ![Close-up of the belt drive CAD](/Images/Belt_Drive_CAD.png)
-<br/>(Note that the upside-down belt gear is a placeholder for an idler)<br/>
+![Belt drive on the actual shooter](/Images/Drive_Belt.jpg)
 
 The most complex part of the shooter to design was the belt drive. The main initial issue with a belt system was that by directly driving both driveshafts, one would spin the wrong way. I solved this by driving a shaft next to one of the driveshafts, and 2 gears to reverse the spinning direction. However, this caused a problem where the smaller shaft (the one with the belt gear and direction reversing gear) would be pulled towards the middle of the belt, creating a lot of friction between the 2 printed gears. I solved this by adding a stabilizing part above it, connecting the shaft to the driveshaft and reducing how much it tilted. When designing the spacing for the belt gears and motors, I tried to design it in such a way that a standard belt loop size would fit; however, I realized I could 'splice' a straight belt, saving the ~$20 it costs for a set of closed-loop belts. This meant I could make it any size I wanted. I initially tried to use this to my advantage by not using a tensioner; however, I quickly realized that the belt was too loose, but too tight with one less tooth in the loop - meaning I needed a tensioner. I designed 2 options, using a screw and a nut to adjust the tightness. I remade the belt and found the ideal tension.<br/><br/>
 
