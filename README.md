@@ -52,9 +52,13 @@ I decided to use an ESP32 to control the launcher over an Arduino Uno, mainly be
 
 For the future, I have many plans to improve this project. I have already planned and designed many improvements, which I will implement soon. These improvements include complete control from the microcontroller, adding a set of wheels and a swivel mount, making the shooter self-contained, and the ability to remotely control the device. 
 
+![Full CAD of the shooter on the tank](/Images/Full_Tank.png)
+
 ### 'Tank' Part
 
 As seen in the image, I plan on converting the ball launcher into its own self-contained foam ball tank. I have already designed all of the printed parts for it, and I am currently figuring out the last few electrical components I need to fit into the tank (relays to control high-voltage motors, transistors to allow the ESP32 to control the relays). The design currently has 4 DC motors for driving the tank, and I am going to use either wheels or tank treads. For the swivelling shooter, I have the 2 motors I mentioned above, with a bracket to attach them. I also made a roof to conceal all the parts, which I designed to be completely optional to help with troubleshooting. I also designed the chassis so that I can easily remove the roof and swap batteries, since this was a big problem in a school design project.
+
+![Inside of the Tank](/Images/Tank_Inside.png)
 
 ### Remote Controlling
 
