@@ -4,7 +4,7 @@ This was the project I worked on during the summer of 2025. I wanted to design s
 
 The launcher works by using a motor to drive a pair of 3D printed TPU flywheels, and the foam balls are gravity-fed into these flywheels, launching the ball. The rate of fire is controlled with a mini servo motor, which prevents/allows the balls to fall into the flywheels.<br/><br/>
 
-Below is a summary of how I designed and refined the design, along with images of the CAD and the finished launcher. I also have future plans for the project at the bottom of this document. More images are viewable [here](/Image_Gallery.md).
+Below is a summary of how I designed and refined the design, along with images of the CAD and the finished launcher. I also have future plans for the project at the bottom of this document. More images are viewable [here](/Image_Gallery.md). I have also attached CAD files in the CAD Files folder, with a .stl of the assembly and SOLIDWORKS files of each part.
 
 ![Image of the foam ball launcher CAD assembly](/Images/Foam-Ball-Launcher-CAD.png)
 ![Image of the built launcher](/Images/Launcher.jpg)
