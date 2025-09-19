@@ -11,4 +11,4 @@ This was the project I worked on during the summer of 2025. I wanted to design s
 
 The launcher is made of PETG and works by using a motor to drive a pair of 3D printed TPU flywheels, and the foam balls are gravity-fed into these flywheels, launching the ball. The rate of fire is controlled with a mini servo motor, which prevents/allows the balls to fall into the flywheels.
 
-![Image of the foam ball launcher](/Images/Launcher/jpg)
+![Image of the foam ball launcher](/Images/Launcher.jpg)
